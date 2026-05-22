@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Карточка авто</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="trust-bar">
+        <span><i class="fas fa-eye"></i> Без скрытых платежей</span>
+        <span><i class="fas fa-clock"></i> Возврат депозита за 1 час</span>
+        <span><i class="fab fa-whatsapp"></i> Круглосуточная техподдержка в WhatsApp</span>
+    </div>
+
+    <header>
+        <div class="logo" onclick="location.href='index.html'">AutoRent<span>Pro</span></div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Автомобили</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+        <div class="theme-switch-wrapper">
+            <i class="fas fa-sun"></i>
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <div class="booking-steps">
+        <div class="step active">1. Выбор авто</div>
+        <div class="step">2. Допы и данные</div>
+        <div class="step">3. Оплата</div>
+    </div>
+
+    <div class="car-detail-container">
+        <div class="car-main">
+            <div id="car-slider" class="car-slider">
+                <!-- Слайдер соберётся динамически через JS -->
+            </div>
+            <div class="car-info">
+                <h2 id="car-name">Hyundai Solaris 2023</h2>
+                <p id="car-desc">Седан, автомат, бензин, кондиционер</p>
+                <div class="price" id="base-price-display">2 500 ₽ / сутки</div>
+                <button id="book-now-btn" class="btn-primary">Забронировать</button>
+            </div>
+        </div>
+
+        <!-- НОВЫЙ БЛОК: Технические характеристики -->
+        <div class="tech-specs">
+            <h3>Технические характеристики</h3>
+            <div class="specs-grid" id="specs-grid">
+                <!-- заполняется из JS -->
+            </div>
+        </div>
+
+        <div class="alternatives">
+            <h3>Похожие автомобили</h3>
+            <div class="alt-cards" id="alt-cards"></div>
+        </div>
+
+        <!-- Обновлённый блок дополнительных услуг -->
+        <div class="extras-calculator">
+            <h3>Дополнительные услуги</h3>
+            <label><input type="checkbox" class="extra" data-price="99"> Вонючка (+99₽)</label>
+            <label><input type="checkbox" class="extra" data-price="499"> Страховка ОСАГО (+499₽)</label>
+            <label><input type="checkbox" class="extra" data-price="1999"> Безлимитный пробег (+1999₽)</label>
+            <label><input type="checkbox" class="extra" data-price="999"> Возврат в другом городе (+999₽)</label>
+            <label><input type="checkbox" class="extra" data-price="500"> Багажник на крышу (+500₽)</label>
+            <label><input type="checkbox" class="extra" data-price="199"> Секретный комплимент (+199₽)</label>
+
+            <div class="total-price-block" style="background: none; text-align: left; padding: 0; margin-top: 20px;">
+                <strong style="font-size: 1.8rem;">Итого «под ключ»:</strong> 
+                <span id="final-price" style="font-size: 2rem; font-weight: bold; color: var(--primary);">2 500 ₽</span>
+                <small>(аренда + страховка + допы)</small>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-telegram"></i> Telegram</a>
+            <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="#"><i class="fab fa-vk"></i> VK</a>
+        </div>
+        <p>© 2026 AutoRentPro — прокат авто с честными условиями</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

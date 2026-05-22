@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оплата</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="trust-bar">
+        <span><i class="fas fa-eye"></i> Без скрытых платежей</span>
+        <span><i class="fas fa-clock"></i> Возврат депозита за 1 час</span>
+        <span><i class="fab fa-whatsapp"></i> Круглосуточная техподдержка в WhatsApp</span>
+    </div>
+    <header>
+        <div class="logo" onclick="location.href='index.html'">AutoRent<span>Pro</span></div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Автомобили</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+        <div class="theme-switch-wrapper">
+            <i class="fas fa-sun"></i>
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
+
+    <div class="booking-steps">
+        <div class="step done">1. Выбор авто</div>
+        <div class="step done">2. Допы и данные</div>
+        <div class="step active">3. Оплата</div>
+    </div>
+
+    <div class="payment-demo">
+        <h2>Оплата бронирования</h2>
+        <div class="payment-card">
+            <p>Сумма к оплате: <strong id="pay-amount">3 200 ₽</strong></p>
+            <p>Способ оплаты: банковская карта, Apple Pay, Google Pay</p>
+            <div class="fake-card-input">
+                <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i>
+                <input type="text" placeholder="Номер карты" disabled value="**** **** **** 4242">
+            </div>
+            <button id="fake-pay" class="btn-primary">Оплатить</button>
+            <p class="note">*После оплаты вы получите электронный чек и договор с ЭЦП на email.</p>
+        </div>
+    </div>
+    <footer>
+        <div class="social-block">
+            <h3>Мы в соцсетях</h3>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-telegram"></i> Telegram</a>
+                <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="#"><i class="fab fa-vk"></i> VK</a>
+            </div>
+            <p>© 2026 AutoRentPro — прокат авто с честными условиями</p>
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>
